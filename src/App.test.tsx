@@ -2,8 +2,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App manages Columns', () => {
+  it('Has one row on creation', () => {
+    var { container } = render(<App />);
+    expect(container.getElementsByClassName('column').length).toBe(1);
+  });
+})
