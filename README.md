@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/michaeleldred/react-kanban/branch/master/graph/badge.svg?token=LN02YN7F6M)](https://codecov.io/gh/michaeleldred/react-kanban)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
