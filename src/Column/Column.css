@@ -14,20 +14,3 @@
     background-color: #4765B0;
     border-radius: 6px 6px 0px 0px;
 }
-
-.column .card {
-    border: none;
-    background-color: #363636;
-    width: 326px;
-    padding: 15px;
-    margin: 6px 10px;
-    color: #ffffff;
-    font-size: 16pt;
-    text-align: left;
-    border-radius: 6px;
-}
-
-.column .card:hover {
-    background-color: #161616;
-    cursor: pointer;
-}

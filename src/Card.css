@@ -1,0 +1,35 @@
+.card {
+    border: none;
+    background-color: #363636;
+    width: 296px;
+    padding: 15px;
+    margin: 6px 10px;
+    border-radius: 6px;
+}
+
+.card:hover {
+    background-color: #161616;
+    cursor: pointer;
+}
+
+.card button {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16pt;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: none;
+    background-color:transparent;
+    width: 100%;
+    color: white;
+    font-size: 16pt;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}

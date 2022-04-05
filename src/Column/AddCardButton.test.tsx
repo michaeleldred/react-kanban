@@ -7,10 +7,10 @@ describe("Add Card Button", () => {
         expect(screen.getAllByRole("button")).toHaveLength(1);
     });
 
-    it('changes to a textbox when clicked', () => {
+    it('focuses the textbox when clicked', () => {
         render(<AddCardButton />);
         fireEvent.click(screen.getByRole('button'));
-        expect(screen.getAllByRole("textbox")).toHaveLength(1);
+        expect(screen.getByRole("textbox")).toHaveFocus()
     });
 
     it('resets when enter is pressed', () => {
@@ -25,4 +25,24 @@ describe("Add Card Button", () => {
         expect(screen.queryAllByRole("textbox")).toHaveLength(0);
         expect(screen.getAllByRole("button")).toHaveLength(1);
     });
+
+    it('returns the title of the card when submitted', () => {
+        let submitFunction = jest.fn();
+        var expectedCardName: string = "A new test card";
+        render(<AddCardButton onSubmit={submitFunction} />);
+        fireEvent.click(screen.getByRole('button'));
+
+        expect(screen.getAllByRole("textbox")).toHaveLength(1);
+
+        screen.getByRole("textbox").setAttribute("value", expectedCardName);
+        
+        fireEvent.keyDown(screen.getByRole("textbox"), {
+            key: "Enter",
+            shiftKey: false
+        });
+
+        expect(submitFunction).toHaveBeenCalledWith({
+            "title": expectedCardName
+        })
+    })
   })
