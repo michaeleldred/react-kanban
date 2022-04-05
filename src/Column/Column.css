@@ -26,3 +26,8 @@
     text-align: left;
     border-radius: 6px;
 }
+
+.column .card:hover {
+    background-color: #161616;
+    cursor: pointer;
+}
