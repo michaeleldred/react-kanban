@@ -1,10 +1,12 @@
+import { AddCardButton } from './AddCardButton';
 import './Column.css';
 
 export const Column: React.FunctionComponent<ColumnProps> = props => {
   return (
     <div className="column">
       <h3>{props.headerName}</h3>
-      <button className="card">+</button>
+
+      <AddCardButton />
     </div>
   );
 }
